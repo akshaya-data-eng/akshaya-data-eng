@@ -3,6 +3,7 @@ import { SectionHeading } from "./SectionHeading";
 
 const certs = [
   { title: "Microsoft Azure Data Engineer Associate (DP-203)", issuer: "Microsoft", status: "In Progress" },
+  { title: "Microsoft Azure Fundamentals (DP-900)", issuer: "Microsoft", status: "Completed" },
   { title: "Databricks Data Engineering Certification", issuer: "Simplilearn", status: "Completed" },
   { title: "PySpark for Data Engineering", issuer: "Simplilearn", status: "Completed" },
   { title: "SQL for Data Engineering", issuer: "Simplilearn", status: "Completed" },
