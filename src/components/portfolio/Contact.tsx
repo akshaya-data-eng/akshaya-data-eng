@@ -1,10 +1,15 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Mail, Phone, Linkedin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { SectionHeading } from "./SectionHeading";
+
+const EMAILJS_SERVICE_ID = "service_3416y7c";
+const EMAILJS_TEMPLATE_ID = "template_g7pz8aw";
+const EMAILJS_PUBLIC_KEY = "heUCDWZZJNvSRcKA3";
 
 const contacts = [
   { icon: Mail, label: "Email", value: "akshayathummanapally630@gmail.com", href: "mailto:akshayathummanapally630@gmail.com" },
@@ -16,18 +21,33 @@ export const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       toast.error("Please fill out all fields");
       return;
     }
     setLoading(true);
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          reply_to: form.email,
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
       toast.success("Message sent! Akshaya will get back to you soon.");
       setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      toast.error("Failed to send message. Please try again or email directly.");
+    } finally {
       setLoading(false);
-    }, 800);
+    }
   };
 
   return (
