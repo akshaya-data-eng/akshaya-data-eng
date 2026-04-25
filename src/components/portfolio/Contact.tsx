@@ -1,10 +1,15 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Mail, Phone, Linkedin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { SectionHeading } from "./SectionHeading";
+
+const EMAILJS_SERVICE_ID = "service_3416y7c";
+const EMAILJS_TEMPLATE_ID = "template_g7pz8aw";
+const EMAILJS_PUBLIC_KEY = "heUCDWZZJNvSRcKA3";
 
 const contacts = [
   { icon: Mail, label: "Email", value: "akshayathummanapally630@gmail.com", href: "mailto:akshayathummanapally630@gmail.com" },
