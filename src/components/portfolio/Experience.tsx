@@ -4,7 +4,8 @@ import { SectionHeading } from "./SectionHeading";
 const points = [
   "Processed large-scale structured & unstructured datasets",
   "Performed data cleaning, transformation, and validation",
-  "Worked extensively in distributed environments (PySpark/Databricks)",
+  "Worked extensively in distributed environments (PySpark/Databricks) and worked with Azure-based data platforms (Databricks, ADLS Gen2) to support data processing and analytics workflows",
+  "Performed data ingestion, transformation, and aggregation as part of ETL pipelines ensuring data accuracy and consistency",
   "Collaborated with cross-functional teams across geographies",
   "Ensured data governance and quality standards across pipelines",
 ];
