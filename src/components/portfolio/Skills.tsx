@@ -37,6 +37,11 @@ const groups = [
     title: "Visualization",
     items: ["Tableau", "Power BI"],
   },
+  {
+    icon: Code2,
+    title: "Frontend",
+    items: ["HTML", "CSS"],
+  },
 ];
 
 export const Skills = () => {
