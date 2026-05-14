@@ -39,8 +39,7 @@ Student Performance Analysis
 Generated insights from transformed data
 
 Certifications
-Microsoft Azure Fundamentals (DP-900)
-Azure Data Engineer Associate (In Progress)
+Microsoft Fabric Data Engineer Associate(In Progress)
 Databricks Data Engineering
 PySpark for Data Engineering
 SQL for Data Engineering
